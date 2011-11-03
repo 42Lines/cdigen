@@ -56,6 +56,7 @@ public class MetaProcessor implements Processor {
 	public static final String CONVERSATION_SCOPED = "javax.enterprise.context.ConversationScoped";
 	public static final String REQUEST_SCOPED = "javax.enterprise.context.RequestScoped";
 	public static final String INTERCEPTOR = "javax.interceptor.Interceptor";
+	public static final String INJECT = "javax.inject.Inject";
 	
 	private ProcessingEnvironment environment;
 
@@ -122,7 +123,8 @@ public class MetaProcessor implements Processor {
 				CONVERSATION_SCOPED,
 				SESSION_SCOPED,
 				APPLICATION_SCOPED,
-				DEPENDENT
+				DEPENDENT,
+				INJECT
 				));
 	}
 
