@@ -27,8 +27,6 @@ import javax.annotation.processing.Completion;
 import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
-import javax.annotation.processing.SupportedAnnotationTypes;
-import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.AnnotationMirror;
 import javax.lang.model.element.Element;
@@ -40,14 +38,6 @@ import javax.tools.Diagnostic.Kind;
 import javax.tools.FileObject;
 import javax.tools.StandardLocation;
 
-@SupportedAnnotationTypes( { 
-	MetaProcessor.DEPENDENT,
-	MetaProcessor.APPLICATION_SCOPED,
-	MetaProcessor.SESSION_SCOPED,
-	MetaProcessor.CONVERSATION_SCOPED,
-	MetaProcessor.REQUEST_SCOPED,
-	MetaProcessor.INTERCEPTOR })
-@SupportedSourceVersion(SourceVersion.RELEASE_6)
 public class MetaProcessor implements Processor {
 	
 	public static final String DEPENDENT = "javax.enterprise.context.Dependent";
