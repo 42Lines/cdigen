@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="cdigen-builder"
+         name="CdiGen"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="cdigen.CdiGenBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         id="cdigen-nature"
+         name="CdiGen Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="cdigen.CdiGenNature">
+         </run>
+      </runtime>
+      <builder
+            id="eclipse-cdigen.cdigen-builder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            nameFilter="*"
+            id="eclipse-cdigen.contribution1">
+         <visibility>
+             <not>
+                 <objectState
+                       name="nature"
+                       value="eclipse-cdigen.cdigen-nature">
+                 </objectState>
+             </not>
+         </visibility>
+         <action
+               label="Add CdiGen Nature"
+               class="cdigen.ToggleNatureAction"
+               menubarPath="additions"
+               enablesFor="+"
+               id="eclipse-cdigen.addRemoveNatureAction">
+         </action>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.core.resources.IProject"
+            nameFilter="*"
+            id="eclipse-cdigen.contribution1">
+          <visibility>
+                 <objectState
+                       name="nature"
+                       value="eclipse-cdigen.cdigen-nature">
+                 </objectState>
+         </visibility>
+         <action
+               label="Remove CdiGen Nature"
+               class="cdigen.ToggleNatureAction"
+               menubarPath="additions"
+               enablesFor="+"
+               id="eclipse-cdigen.addRemoveNatureAction">
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         id="xmlProblem"
+         name="XML Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+
+</plugin>
