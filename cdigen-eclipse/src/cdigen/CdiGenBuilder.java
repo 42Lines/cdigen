@@ -66,9 +66,9 @@ public class CdiGenBuilder extends IncrementalProjectBuilder {
 		}
 	}
 
-	public static final String BUILDER_ID = "eclipse-cdigen.cdigen-builder";
+	public static final String BUILDER_ID = "cdigen-eclipse.cdigen-builder";
 
-	private static final String MARKER_TYPE = "eclipse-cdigen.xmlProblem";
+	private static final String MARKER_TYPE = "cdigen-eclipse.xmlProblem";
 
 	private void addMarker(IResource file, String message, int lineNumber, int severity) {
 		try {
@@ -134,7 +134,7 @@ public class CdiGenBuilder extends IncrementalProjectBuilder {
 			path = path.append(fileName);
 			IFile file = getProject().getFile(path);
 
-			String contents = "eclipse-cdigen: " + new Date().toString();
+			String contents = "cdigen-eclipse: " + new Date().toString();
 			InputStream in = new ByteArrayInputStream(contents.getBytes());
 
 			if (!file.exists()) {

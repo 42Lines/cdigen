@@ -90,6 +90,7 @@ public class ToggleNatureAction implements IObjectActionDelegate {
 			description.setNatureIds(newNatures);
 			project.setDescription(description, null);
 		} catch (CoreException e) {
+			throw new RuntimeException(e);
 		}
 	}
 

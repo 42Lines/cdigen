@@ -23,7 +23,7 @@
          </run>
       </runtime>
       <builder
-            id="eclipse-cdigen.cdigen-builder">
+            id="cdigen-eclipse.cdigen-builder">
       </builder>
    </extension>
    <extension
@@ -32,12 +32,12 @@
             adaptable="true"
             objectClass="org.eclipse.core.resources.IProject"
             nameFilter="*"
-            id="eclipse-cdigen.contribution1">
+            id="cdigen-eclipse.contribution1">
          <visibility>
              <not>
                  <objectState
                        name="nature"
-                       value="eclipse-cdigen.cdigen-nature">
+                       value="cdigen-eclipse.cdigen-nature">
                  </objectState>
              </not>
          </visibility>
@@ -46,18 +46,18 @@
                class="cdigen.ToggleNatureAction"
                menubarPath="additions"
                enablesFor="+"
-               id="eclipse-cdigen.addRemoveNatureAction">
+               id="cdigen-eclipse.addRemoveNatureAction">
          </action>
       </objectContribution>
       <objectContribution
             adaptable="true"
             objectClass="org.eclipse.core.resources.IProject"
             nameFilter="*"
-            id="eclipse-cdigen.contribution1">
+            id="cdigen-eclipse.contribution1">
           <visibility>
                  <objectState
                        name="nature"
-                       value="eclipse-cdigen.cdigen-nature">
+                       value="cdigen-eclipse.cdigen-nature">
                  </objectState>
          </visibility>
          <action
@@ -65,7 +65,7 @@
                class="cdigen.ToggleNatureAction"
                menubarPath="additions"
                enablesFor="+"
-               id="eclipse-cdigen.addRemoveNatureAction">
+               id="cdigen-eclipse.addRemoveNatureAction">
          </action>
       </objectContribution>
    </extension>

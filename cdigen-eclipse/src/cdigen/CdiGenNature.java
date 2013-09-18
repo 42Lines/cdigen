@@ -11,7 +11,7 @@ public class CdiGenNature implements IProjectNature {
 	/**
 	 * ID of this project nature
 	 */
-	public static final String NATURE_ID = "eclipse-cdigen.cdigen-nature";
+	public static final String NATURE_ID = "cdigen-eclipse.cdigen-nature";
 
 	private IProject project;
 
