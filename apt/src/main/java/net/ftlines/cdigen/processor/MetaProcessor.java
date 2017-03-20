@@ -45,6 +45,7 @@ public class MetaProcessor implements Processor {
 	public static final String SESSION_SCOPED = "javax.enterprise.context.SessionScoped";
 	public static final String CONVERSATION_SCOPED = "javax.enterprise.context.ConversationScoped";
 	public static final String REQUEST_SCOPED = "javax.enterprise.context.RequestScoped";
+	public static final String TENANT_SCOPED = "net.ftlines.bean.integration.tenant.TenantScoped";
 	public static final String INTERCEPTOR = "javax.interceptor.Interceptor";
 	public static final String INJECT = "javax.inject.Inject";
 	
@@ -110,6 +111,7 @@ public class MetaProcessor implements Processor {
 		return new HashSet<String>(Arrays.asList(
 				INTERCEPTOR,
 				REQUEST_SCOPED,
+				TENANT_SCOPED,
 				CONVERSATION_SCOPED,
 				SESSION_SCOPED,
 				APPLICATION_SCOPED,

@@ -106,7 +106,7 @@ public class CdiGenBuilder extends IncrementalProjectBuilder {
 	}
 
 	private static final String[] TRIGGERS = new String[] { "javax.enterprise.context.Dependent",
-			"javax.enterprise.context.ConversationScoped", "javax.enterprise.context.SessionScoped",
+			"javax.enterprise.context.ConversationScoped", "javax.enterprise.context.SessionScoped","net.ftlines.bean.integration.tenant.TenantScoped",
 			"javax.enterprise.context.RequestScoped", "javax.enterprise.context.ApplicationScoped", "javax.inject.Inject",
 			"javax.interceptor.Interceptor" };
 
