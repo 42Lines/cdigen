@@ -18,7 +18,11 @@
 	   <distribution>repo</distribution>
 	  </license>
 	 </licenses>
-	
+	<scm>
+		<connection>scm:git:https://github.com/42Lines/cdigen.git</connection>
+		<developerConnection>scm:git:https://github.com/42Lines/cdigen.git</developerConnection>
+		<url>git@github.com/42Lines/cdigen.git</url>
+	</scm>	
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
